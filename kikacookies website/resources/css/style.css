@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 30px 0;
+}
+
+h1, h2 {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+}
+
+h1 {
+    font-size: 240%;
+    font-weight: 300;
+    color: #fff;
+}
+
+h2 {
+    font-size: 180%;
+    color: #555;
+    font-weight: 300;
+    text-align: center;
+}
+
+/* line after heading */
+h2:after {
+    content:' ';
+    display:block;
+    width: 100px;
+    margin: 20px auto;
+    border:2px solid #fda02e;
+    border-radius:4px;
+}
+
+
+
+                      /* HEADER */
+
+header {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.53)), to(rgba(0, 0, 0, 0.53))), url(img/header-background.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.53), rgba(0, 0, 0, 0.53)), url(img/header-background.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment:fixed;
+}
+
+
+.header-text-box {
+    position: absolute;
+    width: 1140px;
+    top: 55%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* used to center text properly*/
+}
+
+.btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px;
+    margin: 40px 70px;
+    color: #fff;
+    font-size: 100%;
+    font-weight: 400;
+    border-style: solid;
+    border-color: #fda02e;
+    border-radius: 40%;
+    border-width: 1px;
+    background-color: #fda02e;
+    -webkit-transition: background-color 0.5s, border 0.5s, color 0.5s;
+    transition: background-color 0.5s, border 0.5s, color 0.5s;
+}
+
+
+.btn:hover {
+    color: #fda02e;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-color: rgba(255, 255, 255, 0.4);
+ }
+
+/* main row */
+
+.contact-data{
+    position: relative;
+    float: left;
+    margin: 20px 10px;
+    color: #fff;
+    font-weight: 100;
+    font-size: 80%;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+}
+
+.logo img {
+    height: 100px;
+    width: auto;
+    margin: 10px 20px 20px 230px;
+    float: left;
+    display: inline-block;
+    opacity: 0.6;
+}
+
+.nav {
+    float: right;
+    margin: 30px 10px;
+    list-style: none;
+}
+
+.nav li {
+    display: inline-block;
+    margin-left: 20px; 
+}
+
+.nav li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase
+}
+
+/* sticky row */
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 2px #bebebe;
+    z-index: 10;
+}
+
+.sticky .nav li a {
+    color: #555;
+}
+.sticky .contact-data {
+    color: #555;
+}
+
+                       /* Section story */
+
+.section-story{
+background-color: #fffeee;    
+}
+
+.section-story .span-1-of-2 p {
+    padding: 50px 50px 50px 50px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    text-indent: 1.5em;
+}
+.span-1-of-2 a {
+    text-decoration: none;
+    color: #fda02e;
+}
+
+
+                       /* Section cookies order */
+.section-order {
+    padding: 0;
+}
+
+.section-order .cookies-list ul {
+    display:inline-block;
+    display: table; /*used to delete margin between ul elements */
+    margin: 0;
+    padding: 0;
+
+}
+.cookies-list {
+    list-style: none;
+    width: 100%;
+}
+
+.cookies-list li {
+    display: block;
+    float: left;
+    width: 25%;
+    height: auto;
+}
+
+.cookies-photo {
+    width: 100%;
+    margin: 0;
+    overflow: hidden; /*used to hide exceeding part of scaled img */
+    background-color: #000000; /* Set backround black for img to be darker with opacity 0.7 */
+}
+
+.holder img {
+    width: 100%;
+    height: auto;
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15); /*used to zoom img*/
+    -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+    transition: opacity 0.2s, -webkit-transform 0.2s;
+    transition: transform 0.2s, opacity 0.2s;
+    transition: transform 0.2s, opacity 0.2s, -webkit-transform 0.2s;
+    opacity: 0.7; /* transparancy */
+}
+
+ .holder{
+    position:relative;   
+    background:#ff6600;
+}
+ .block{
+    position:absolute;
+    left:0;
+    bottom:0;
+    right:0;
+    top:0;
+    background:rgba(255,255,255, 0.7);
+    padding:50px;
+    display:none;
+    text-align: center;
+}
+ .holder:hover .block{
+    display:block;
+}
+.holder:hover img {
+    -webkit-transform: scale(1.04);
+    transform: scale(1.04); 
+    opacity: 1;
+}
+
+                     /* Section testimonials */
+.section-testimonial {
+    background-color: #fffeee;
+    padding: 50px 40px;
+}
+.section-testimonial img {
+    border-radius: 50%;
+    padding: 2% 2%;
+}
+
+.section-testimonial i {color:#fda02e;}
+
+.section-testimonial blockquote {margin: 10px 50px 10px 10px;}
+
+                    /* Section contact form */
+.map-box {
+    width: 100%;
+    height: 560px;
+    position: relative;
+}
+
+.map {
+    width: 100%;
+    height: 560px;
+    position: relative;
+    z-index: 0;
+}
+.form-box {
+    height: 560px;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.81);
+    z-index: 9;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    resize: vertical;
+}
+
+
+                    /* FOOTER */
+footer {
+    background-color: #6f6f6f;
+    color: #cecece;
+    padding: 20px;
+    font-size: 90%;
+}
+
+.footer-nav {
+     float: left;
+}
+.footer-nav li {
+    list-style: none;
+    margin: 30px;
+    display: inline-block;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.footer-nav li:hover {
+   color: #8e8e8e;
+}
+
+footer .col {float: right;}
+
+.footer-icons {float: right;}
+
+.footer-icons li {
+    list-style: none;
+    position: relative;
+    margin: 20px;
+    display: inline-block;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+.footer-icons li:last-child {margin-right: 100px;}
+
+.footer-icons li:hover {
+    color: #fda02e;
+}
+
+footer p {
+    text-align: center;
+    margin: 20px;
+}
